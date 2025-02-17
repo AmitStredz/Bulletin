@@ -25,9 +25,11 @@ SECRET_KEY = 'django-insecure-@@n&m5lh3bz#8y7&v=z3!6g&w_ug=92c$d^#d^*=2_k+ne2-se
 DEBUG = False
 
 ALLOWED_HOSTS = ['*']
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_CREDENTIALS = True
 
-
-
+CORS_ALLOW_HEADERS = ['*']
+CORS_ALLOW_METHODS = ['*']
 
 
 INSTALLED_APPS = [
@@ -39,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework_simplejwt',
+    'corsheaders',
     'User'
 ]
 
@@ -47,6 +50,7 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',  
     'django.middleware.common.CommonMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -101,7 +105,7 @@ DATABASES = {
 #     }
 # }
 
-# DATABASES["default"] = dj_database_url.parse("postgresql://bulletin_inb9_user:cZgzpbUgwxUpVypqfZqezvFuuLKUYuJA@dpg-cs8feilumphs73864ev0-a.oregon-postgres.render.com/bulletin_inb9")
+DATABASES["default"] = dj_database_url.parse("postgresql://bulletin_rhul_user:FHv5ZT1pXNYKuyRly1ieuUxdDmbS0bZh@dpg-cupda0lsvqrc73evvqeg-a.oregon-postgres.render.com/bulletin_rhul")
 
 
 # Password validation
