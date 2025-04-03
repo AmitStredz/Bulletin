@@ -177,9 +177,9 @@ export default function UserPage() {
                     Age: <span className="font-bold text-white">21</span>
                   </span>
                   <div className="w-[1px] bg-white "></div>
-                  <span>
+                  {/* <span>
                     Gender: <span className="font-bold text-white">Male</span>
-                  </span>
+                  </span> */}
                   <div className="w-[1px] bg-white "></div>
 
                   <span>
